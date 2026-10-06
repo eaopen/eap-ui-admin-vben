@@ -1,28 +1,24 @@
 {
-  "name": "vben-admin-monorepo",
+  "name": "eap-ui-admin-vben",
   "version": "5.7.0",
   "private": true,
-  "yudao-version": "2026.09.0-snapshot",
+  "eap-version": "2026.09.0-snapshot",
   "keywords": [
     "monorepo",
     "turbo",
-    "vben",
-    "vben admin",
-    "vben pro",
+    "eap",
+    "eap admin",
     "vue",
     "vue admin",
-    "vue vben admin",
-    "vue vben admin pro",
     "vue3"
   ],
-  "homepage": "https://github.com/vbenjs/vue-vben-admin",
-  "bugs": "https://github.com/vbenjs/vue-vben-admin/issues",
-  "repository": "vbenjs/vue-vben-admin.git",
+  "homepage": "https://github.com/eaopen/eap-ui-admin-vben",
+  "bugs": "https://github.com/eaopen/eap-ui-admin-vben/issues",
+  "repository": "eaopen/eap-ui-admin-vben.git",
   "license": "MIT",
   "author": {
-    "name": "vben",
-    "email": "ann.vben@gmail.com",
-    "url": "https://github.com/anncwb"
+    "name": "EAP",
+    "url": "https://github.com/eaopen/eap-ui-admin-vben"
   },
   "type": "module",
   "scripts": {

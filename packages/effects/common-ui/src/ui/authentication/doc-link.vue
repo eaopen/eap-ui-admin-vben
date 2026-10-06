@@ -16,32 +16,18 @@ defineOptions({
 
     <div class="mt-4 flex w-full justify-between">
       <a
-        href="https://doc.iocoder.cn/"
+        href="https://github.com/eaopen/eap-ui-admin-vben"
         target="_blank"
         class="text-primary hover:text-primary/80 text-sm"
       >
-        📚 开发指南
+        📦 前端仓库
       </a>
       <a
-        href="https://doc.iocoder.cn/video/"
+        href="https://github.com/eaopen/eap-boot"
         target="_blank"
         class="text-primary hover:text-primary/80 text-sm"
       >
-        🔥 视频教程
-      </a>
-      <a
-        href="https://www.iocoder.cn/Interview/good-collection/"
-        target="_blank"
-        class="text-primary hover:text-primary/80 text-sm"
-      >
-        ⚡ 面试手册
-      </a>
-      <a
-        href="http://static.yudao.iocoder.cn/mp/xinyu370.jpeg"
-        target="_blank"
-        class="text-primary hover:text-primary/80 text-sm"
-      >
-        🤝 外包咨询
+        📚 后端仓库
       </a>
     </div>
   </div>

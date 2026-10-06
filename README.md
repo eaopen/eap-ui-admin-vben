@@ -1,29 +1,43 @@
-# 严肃声明：现在、未来都不会有商业版本，所有代码全部开源
+# EAP 管理系统（Vue3 + Vben5）
 
-**「我喜欢写代码，乐此不疲」**  
-**「我喜欢做开源，以此为乐」**
+EAP Boot 的后台管理前端，基于 [vue-vben-admin](https://github.com/vbenjs/vue-vben-admin) v5.7.0 二次开发，
+对接 [EAP Boot](https://github.com/eaopen/eap-boot) 后端（接口前缀 `/admin-api`，本地默认 `http://127.0.0.1:48080`）。
 
-我 🐶 在上海艰苦奋斗，早中晚在 top3 大厂认真搬砖，夜里为开源做贡献。
+- 仓库地址：<https://github.com/eaopen/eap-ui-admin-vben>
+- 支持 [Ant Design Vue](https://www.antdv.com/) | [Element Plus](https://element-plus.org/zh-CN/) | [Naive UI](https://www.naiveui.com/) | [TDesign](https://tdesign.tencent.com/) 多种中后台模版
 
-如果这个项目让你有所收获，记得 Star 关注哦，这对我是非常不错的鼓励与支持。
+## 分支说明
+
+| 分支 | 用途 |
+| --- | --- |
+| `upstream` | 上游同步分支，保持与上游一致，仅用于合并上游更新 |
+| `dev` | 开发分支，承载 EAP 定制，日常开发在此进行 |
+| `master` | 上游发布分支 |
 
 ## 🐶 新手必读
 
-- nodejs >= v22.18.0（推荐v24） && pnpm >= 11.0.0（强制使用 pnpm）
-- 演示地址【Vue3 + element-plus】：<http://dashboard-vue3.yudao.iocoder.cn>
-- 演示地址【Vue3 + vben5(ant-design-vue)】：<http://dashboard-vben.yudao.iocoder.cn>
-- 演示地址【Vue2 + element-ui】：<http://dashboard.yudao.iocoder.cn>
-- 启动文档：<https://doc.iocoder.cn/quick-start/>
-- 视频教程：<https://doc.iocoder.cn/video/>
+- nodejs >= v22.18.0（推荐 v24） && pnpm >= 11.0.0（强制使用 pnpm）
 
-## 🐯 平台简介
+## 快速开始
 
-**芋道**，以开发者为中心，打造中国第一流的快速开发平台，全部开源，个人与企业可 100% 免费使用。
+```bash
+pnpm install
+pnpm dev:antd   # Ant Design Vue 版本，默认 http://localhost:5666
+```
 
-- 采用最新 [vue-vben-admin](https://github.com/vbenjs/vue-vben-admin) v5.7.0 实现
-- 支持 [Ant Design Vue](https://www.antdv.com/) | [Element Plus](https://element-plus.org/zh-CN/) | [Naive UI](https://www.naiveui.com/) | [TDesign](https://tdesign.tencent.com/) 多种免费开源的中后台模版，具备如下特性：
+后端地址默认 `http://127.0.0.1:48080/admin-api`，按需修改 `apps/<app>/.env.development` 中的 `VITE_BASE_URL` / `VITE_GLOB_API_URL`。
 
-![首页](.gitee/image/demo/vben.png)
+## 内置应用
+
+| 应用 | UI 框架 | 开发端口 |
+| --- | --- | --- |
+| `apps/web-antd` | Ant Design Vue | 5666 |
+| `apps/web-antdv-next` | Ant Design Vue (Next) | 5999 |
+| `apps/web-ele` | Element Plus | 5777 |
+| `apps/web-naive` | Naive UI | 5888 |
+| `apps/web-tdesign` | TDesign | 5999 |
+
+## 特性
 
 - **最新技术栈**：使用 Vue3、Vite8 等前端前沿技术开发
 - **TypeScript**: 应用程序级 JavaScript 的语言
@@ -32,10 +46,6 @@
 - **权限**：内置完善的动态路由权限生成方案
 - **组件**：二次封装了多个常用的组件
 - **示例**：内置丰富的示例
-
-## [外包项目请联系【非项目需求请勿扫码，非客服，不解答项目问题】](https://www.shuduokeji.com?yudao)
-
-![alt 软件定制开发 数舵科技](.gitee/image/wx-xingyu.png)
 
 ## 技术栈
 
@@ -62,17 +72,14 @@
 | [vee-validate](https://vee-validate.logaretm.com/) | 表单验证 | 4.15.1 |
 | [zod](https://zod.dev/) | 数据验证 | 3.25.76 |
 
-## 🔥 后端架构
+## 🔥 后端
 
-支持 Spring Boot、Spring Cloud 两种架构：
+本前端对接 EAP Boot 后端，支持 Spring Boot 单体与 Spring Cloud 微服务两种架构：
 
-① Spring Boot 单体架构：<https://doc.iocoder.cn>
+- EAP Boot（后端主仓）：<https://github.com/eaopen/eap-boot>
+- EAP Common（共享框架 / BOM）：<https://github.com/eaopen/eap-common>
 
-![架构图](/.gitee/image/common/ruoyi-vue-pro-architecture.png)
-
-② Spring Cloud 微服务架构：<https://cloud.iocoder.cn>
-
-![架构图](/.gitee/image/common/yudao-cloud-architecture.png)
+后端接口前缀为 `/admin-api`，本地默认端口 `48080`。
 
 ## 内置功能
 
@@ -213,7 +220,6 @@
 
 ### 商城系统
 
-演示地址：<https://doc.iocoder.cn/mall-preview/>
 
 ![功能图](/.gitee/image/common/mall-feature.png)
 
@@ -231,13 +237,11 @@
 
 ### ERP 系统
 
-演示地址：<https://doc.iocoder.cn/erp-preview/>
 
 ![功能图](/.gitee/image/common/erp-feature.png)
 
 ### WMS 系统
 
-演示地址：<https://doc.iocoder.cn/wms-preview/>
 
 ![功能图](/.gitee/image/common/wms-feature.png)
 
@@ -245,13 +249,11 @@
 
 ### CRM 系统
 
-演示地址：<https://doc.iocoder.cn/crm-preview/>
 
 ![功能图](/.gitee/image/common/crm-feature.png)
 
 ### MES 系统
 
-演示地址：<https://doc.iocoder.cn/mes-preview/>
 
 ![功能图](/.gitee/image/common/mes-feature.png)
 
@@ -259,7 +261,6 @@
 
 ### HRM 人力资源管理系统
 
-演示地址：<https://doc.iocoder.cn/hrm-preview/>
 
 ![功能图](/.gitee/image/common/hrm-feature.png)
 
@@ -267,7 +268,6 @@
 
 ### FMS 财务管理系统
 
-演示地址：<https://doc.iocoder.cn/fms-preview/>
 
 ![功能图](/.gitee/image/common/fms-feature.png)
 
@@ -275,7 +275,6 @@
 
 ### PMS 项目管理系统
 
-演示地址：<https://doc.iocoder.cn/pms-preview/>
 
 ![功能图](/.gitee/image/common/pms-feature.png)
 
@@ -283,7 +282,6 @@
 
 ### OA 协同办公
 
-演示地址：<https://doc.iocoder.cn/oa-preview/>
 
 ![功能图](/.gitee/image/common/oa-feature.png)
 
@@ -291,7 +289,6 @@
 
 ### AI 大模型
 
-演示地址：<https://doc.iocoder.cn/ai-preview/>
 
 ![功能图](/.gitee/image/common/ai-feature.png)
 
@@ -299,7 +296,6 @@
 
 ### IoT 物联网
 
-演示地址：<https://doc.iocoder.cn/iot/build>
 
 ![功能图](/.gitee/image/common/iot-feature.png)
 
@@ -307,9 +303,7 @@
 
 ### IM 即时通讯
 
-演示地址（Vue3 + Vben5）：<http://dashboard-vben.yudao.iocoder.cn>
 
-使用文档：<https://doc.iocoder.cn/im-preview/>
 
 ![功能图](/.gitee/image/common/im-feature.png)
 
